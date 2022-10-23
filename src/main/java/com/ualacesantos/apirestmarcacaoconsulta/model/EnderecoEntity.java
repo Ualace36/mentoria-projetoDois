@@ -1,10 +1,12 @@
 package com.ualacesantos.apirestmarcacaoconsulta.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 @Entity
 public class EnderecoEntity {
     @Id
+    @Column(nullable = false)
     private String cep;
     private String logradouro;
     private String complemento;
