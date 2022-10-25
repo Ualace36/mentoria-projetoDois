@@ -11,7 +11,7 @@ public interface IService <T>{
     Iterable<PacienteEntity> getByAll();
 
 
-    void delete(PacienteEntity pacienteEntity);
+    void delete(Long id);
 
     PacienteEntity atualizar (Long id, PacienteEntity pacienteEntity);
     PacienteEntity create(PacienteEntity pacienteEntity);
