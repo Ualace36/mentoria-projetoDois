@@ -50,7 +50,7 @@ public class PacienteService implements IService {
                 return novoEndereco;
             });
             pacienteEntity.setEnderecoEntity(enderecoEntity);
-            ienderecoRepository.save(enderecoEntity);
+            ipacienteRepository.save(pacienteEntity);
         }
         return pacienteEntity;
     }
