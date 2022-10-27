@@ -39,7 +39,7 @@ public class PacienteService implements IService {
         ipacienteRepository.deleteById(id);
     }
 
-    @Override
+
     public PacienteEntity atualizar(Long id, PacienteEntity pacienteEntity) {
         Optional<PacienteEntity> pacientedb = ipacienteRepository.findById(id);
         if(pacientedb.isPresent()){
@@ -55,7 +55,8 @@ public class PacienteService implements IService {
         return pacienteEntity;
     }
 
-    @Override
+
+
     public PacienteEntity create(PacienteEntity pacienteEntity) {
         String cep = pacienteEntity.getEndereco().getCep();
         EnderecoEntity enderecoEntity = ienderecoRepository.findById(cep).orElseGet(() -> {

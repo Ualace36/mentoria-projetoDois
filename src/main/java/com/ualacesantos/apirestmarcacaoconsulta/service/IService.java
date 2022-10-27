@@ -4,16 +4,12 @@ import com.ualacesantos.apirestmarcacaoconsulta.model.PacienteEntity;
 
 import java.util.List;
 
-public interface IService <T>{
+public interface IService <T> {
 
-    PacienteEntity getById(Long id);
+    T getById(Long id);
 
-    Iterable<PacienteEntity> getByAll();
+    Iterable<T> getByAll();
 
 
     void delete(Long id);
-
-    PacienteEntity atualizar (Long id, PacienteEntity pacienteEntity);
-    PacienteEntity create(PacienteEntity pacienteEntity);
-
 }
