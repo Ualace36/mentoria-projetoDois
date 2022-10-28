@@ -3,11 +3,10 @@ package com.ualacesantos.apirestmarcacaoconsulta.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "MEDICO")
 public class MedicoEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     @Column(name = "id_medico", nullable = false)
+    @Id
     private Long idMedico;
     @Column(nullable = false)
     private String name;

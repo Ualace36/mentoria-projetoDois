@@ -16,6 +16,7 @@ public class ConsultaEntity {
 
     @ManyToOne
     @JoinColumn(name = "medico_id_medico",nullable = false)
+    @Embedded
     private MedicoEntity medico;
     @Column(nullable = false)
     private LocalDateTime inicioCOnsulta;

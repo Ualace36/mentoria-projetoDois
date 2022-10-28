@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.Optional;
 
 @Service
-public class PacienteService implements IService {
+public class PacienteService implements IService<PacienteEntity>{
     @Autowired
     private IViaCepService viaCepService;
 
@@ -21,27 +21,27 @@ public class PacienteService implements IService {
     private IEnderecoRepository ienderecoRepository;
 
     @Autowired
-    private IPacienteRepository ipacienteRepository;
+    private IPacienteRepository pacienteRepository;
 
     @Override
     public PacienteEntity getById(@PathVariable Long id) {
-        Optional<PacienteEntity> pacienteEntity = ipacienteRepository.findById(id);
+        Optional<PacienteEntity> pacienteEntity =pacienteRepository.findById(id);
         return pacienteEntity.get();
     }
 
     @Override
     public Iterable<PacienteEntity> getByAll() {
-        return ipacienteRepository.findAll();
+        return pacienteRepository.findAll();
     }
 
     @Override
     public void delete(@PathVariable Long id) {
-        ipacienteRepository.deleteById(id);
+        pacienteRepository.deleteById(id);
     }
 
 
     public PacienteEntity atualizar(Long id, PacienteEntity pacienteEntity) {
-        Optional<PacienteEntity> pacientedb = ipacienteRepository.findById(id);
+        Optional<PacienteEntity> pacientedb = pacienteRepository.findById(id);
         if(pacientedb.isPresent()){
             String cep = pacienteEntity.getEndereco().getCep();
             EnderecoEntity enderecoEntity = ienderecoRepository.findById(cep).orElseGet(() -> {
@@ -49,8 +49,8 @@ public class PacienteService implements IService {
                 ienderecoRepository.save(novoEndereco);
                 return novoEndereco;
             });
-            pacienteEntity.setEnderecoEntity(enderecoEntity);
-            ipacienteRepository.save(pacienteEntity);
+            pacienteEntity.setEndereco(enderecoEntity);
+            pacienteRepository.save(pacienteEntity);
         }
         return pacienteEntity;
     }
@@ -64,8 +64,8 @@ public class PacienteService implements IService {
            ienderecoRepository.save(novoEndereco);
             return novoEndereco;
         });
-        pacienteEntity.setEnderecoEntity(enderecoEntity);
-         ipacienteRepository.save(pacienteEntity);
+        pacienteEntity.setEndereco(enderecoEntity);
+         pacienteRepository.save(pacienteEntity);
         return pacienteEntity;
     }
 
