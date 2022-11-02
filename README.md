@@ -28,7 +28,7 @@ Uma Api Rest com os requisítos REST presentes. Essa Api possue os verbos Http G
 
 ## :interrobang: Motivo
 
-Esse projeto foi desenvolvido para buscar uma soloção para a gestão de um cliníca médica de  seus pacientes, médicos e marcação de consulta. Ao criar um novo paciente no banco de dados, este era capaz de marcar uma consulta com determinado médico presente no banco de dados. Após esse procedimento, constava no banco de dados o vínculo da consulta com o paciente e o médico especificado, faculitando assim a gestão desses procedimentos pela a clínica.
+Esse projeto foi desenvolvido para buscar uma solução para a gestão de um cliníca médica dos  seus pacientes, médicos e marcação de consulta vinculando o paciente ao médico e data. Ao criar um novo paciente no banco de dados, este era capaz de marcar uma consulta com determinado médico presente no banco de dados. Após esse procedimento, constava no banco de dados o vínculo da consulta com o paciente e o médico especificado, faculitando assim a gestão desses procedimentos pela a clínica.
 
 ## :seedling: Requisitos Mínimos
 
