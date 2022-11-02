@@ -4,9 +4,11 @@ ___
 
 
 <p align="center">
-  <img src="https://readme-maker.herokuapp.com/uploads/8cbb723cfa7e2694-apiLogo.png" width="300" heigth="300">
+  <img src="https://github.com/Ualace36/dataImag/blob/main/apiLogo.png" width="300" heigth="300">
 </p>
 
+[![skills](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io/projects/spring-boot/)
+[![skills](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)](https://docs.oracle.com/en/java/)
 
 <h3 align="center">
   <a href="#information_source-sobre">Sobre</a>&nbsp;|&nbsp;
@@ -18,7 +20,7 @@ ___
 
 ___
 
-<img src="https://readme-maker.herokuapp.com/uploads/1c8714732abc1764-banner-linkedin.png" width="1200">
+<img src="https://github.com/Ualace36/dataImag/blob/main/banner-linkedin.png" width="1200">
 
 ## :information_source: Sobre
 
